@@ -1,0 +1,122 @@
+[
+    {
+        "name": "간단한 사과 샐러드",
+        "required_ingredients": ["apple", "bell_pepper"],
+        "optional_ingredients": ["banana"],
+        "url": "https://www.10000recipe.com/recipe/6898059"
+    },
+    {
+        "name": "바나나 우유 스무디",
+        "required_ingredients": ["banana", "milk"],
+        "optional_ingredients": [],
+        "url": "https://www.10000recipe.com/recipe/4037817"
+    },
+    {
+        "name": "닭고기 감자 카레",
+        "required_ingredients": ["chicken", "potato", "onion"],
+        "optional_ingredients": ["carrot"],
+        "url": "https://www.10000recipe.com/recipe/7008216"
+    },
+    {
+        "name": "초간단 계란 오믈렛",
+        "required_ingredients": ["egg", "milk"],
+        "optional_ingredients": ["onion", "green"],
+        "url": "https://www.10000recipe.com/recipe/7010163"
+    },
+    {
+        "name": "오븐 구운 감자",
+        "required_ingredients": ["potato"],
+        "optional_ingredients": ["bell_pepper", "onion"],
+        "url": "https://www.10000recipe.com/recipe/6965157"
+    },
+    {
+        "name": "냉장고 파먹기 채소 볶음",
+        "required_ingredients": ["cabbage", "onion"],
+        "optional_ingredients": ["carrot", "bell_pepper", "green"],
+        "url": "https://www.10000recipe.com/recipe/6955760"
+    },
+    {
+        "name": "싱싱한 그린 샐러드",
+        "required_ingredients": ["green"],
+        "optional_ingredients": ["bell_pepper", "carrot"],
+        "url": "https://www.10000recipe.com/recipe/6935478"
+    },
+    {
+        "name": "당근 머핀",
+        "required_ingredients": ["carrot"],
+        "optional_ingredients": ["egg"],
+        "url": "https://www.10000recipe.com/recipe/6948184"
+    },
+    {
+        "name": "계란 볶음밥",
+        "required_ingredients": ["egg", "onion"],
+        "optional_ingredients": ["carrot", "green"],
+        "url": "https://www.10000recipe.com/recipe/6908026"
+    },
+    {
+        "name": "양파 수프",
+        "required_ingredients": ["onion"],
+        "optional_ingredients": ["green"],
+        "url": "https://www.10000recipe.com/recipe/6899891"
+    },
+    {
+        "name": "삶은 계란",
+        "required_ingredients": ["egg"],
+        "optional_ingredients": [],
+        "url": "https://www.10000recipe.com/recipe/6900660"
+    },
+    {
+        "name": "신선한 당근 주스",
+        "required_ingredients": ["carrot"],
+        "optional_ingredients": ["apple"],
+        "url": "https://www.10000recipe.com/recipe/7000452"
+    },
+    {
+        "name": "치킨 샐러드",
+        "required_ingredients": ["chicken", "green"],
+        "optional_ingredients": ["bell_pepper"],
+        "url": "https://www.10000recipe.com/recipe/6890920"
+    },
+    {
+        "name": "간단 감자전",
+        "required_ingredients": ["potato"],
+        "optional_ingredients": ["onion", "green"],
+        "url": "https://www.10000recipe.com/recipe/6877887"
+    },
+    {
+        "name": "배추된장국",
+        "required_ingredients": ["cabbage"],
+        "optional_ingredients": ["onion", "green"],
+        "url": "https://www.10000recipe.com/recipe/7018259"
+    },
+    {
+        "name": "대파 계란찜",
+        "required_ingredients": ["egg", "green"],
+        "optional_ingredients": ["milk"],
+        "url": "https://www.10000recipe.com/recipe/6903307"
+    },
+    {
+        "name": "대파라면",
+        "required_ingredients": ["green"],
+        "optional_ingredients": ["egg"],
+        "url": "https://www.10000recipe.com/recipe/6979961"
+    },
+    {
+        "name": "대파 김치전",
+        "required_ingredients": ["green", "cabbage"],
+        "optional_ingredients": ["egg"],
+        "url": "https://www.10000recipe.com/recipe/6998878"
+    },
+    {
+        "name": "대파 구이",
+        "required_ingredients": ["green"],
+        "optional_ingredients": [],
+        "url": "https://www.10000recipe.com/recipe/7002011"
+    },
+    {
+        "name": "닭볶음탕",
+        "required_ingredients": ["chicken", "potato", "carrot", "onion", "green"],
+        "optional_ingredients": [],
+        "url": "https://www.10000recipe.com/recipe/6876357"
+    }
+]
