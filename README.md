@@ -1,0 +1,1 @@
+# DLIP_Final_Project_Smart_Fridge_2025
