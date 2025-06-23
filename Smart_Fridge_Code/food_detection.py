@@ -13,7 +13,7 @@ from recipe_recommender import RecipeRecommender
 from recipe_window import RecipeWindow
 from additional_recipe_window import AdditionalRecipeWindow
 
-# 음식 감지 정보
+# Food detection information
 FOOD = {
     "apple": ["", 0, None], 
     "banana": ["", 0, None], 
@@ -44,17 +44,17 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.label)
 
         self.table = QTableWidget(0, 4, self)
-        self.table.setHorizontalHeaderLabels([" ", "이름", "등록 시간", "경과 시간"])
+        self.table.setHorizontalHeaderLabels([" ", "Name", "Registered Time", "Elapsed Time"])
         self.table.horizontalHeader().setStretchLastSection(True)
         self.table.verticalHeader().setVisible(False)
         self.table.setEditTriggers(QTableWidget.NoEditTriggers)
         self.table.setSelectionMode(QTableWidget.NoSelection)
         layout.addWidget(self.table)
 
-        # 테이블 아이템 클릭 이벤트 연결
+        # Connect table item click event
         self.table.cellClicked.connect(self.on_table_cell_clicked)
 
-        self.recommend_button = QPushButton("현재 재료 레시피 추천받기", self)
+        self.recommend_button = QPushButton("Get Current Ingredient Recipe Recommendations", self)
         self.recommend_button.setStyleSheet(
             "background-color: #4CAF50; color: white; font-size: 16px; padding: 10px;"
         )
@@ -70,7 +70,7 @@ class MainWindow(QMainWindow):
 
         self.cap = cv2.VideoCapture("DLIP_Test_Video_Simple2.mp4")
         if not self.cap.isOpened():
-            QMessageBox.critical(self, "에러", "비디오 파일을 열 수 없습니다.")
+            QMessageBox.critical(self, "Error", "Could not open video file.")
             sys.exit()
 
         self.timer = QTimer()
@@ -78,7 +78,7 @@ class MainWindow(QMainWindow):
         self.timer.start(100)
 
         self.recipe_window = None
-        self.additional_recipe_window = None # 추가 레시피 창 인스턴스 초기화
+        self.additional_recipe_window = None # Initialize additional recipe window instance
 
     def detect_from_camera(self):
         ret, frame = self.cap.read()
@@ -114,7 +114,7 @@ class MainWindow(QMainWindow):
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
             label = f"{cls_name} {conf:.2f}"
             cv2.putText(frame, label, (x1, y1 - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
         for food in list(FOOD.keys()):
             if FOOD[food][1] == 1 and food not in detected_now:
@@ -144,7 +144,7 @@ class MainWindow(QMainWindow):
                 SP_delta = current_time - start_time
                 SP = str(SP_delta).split('.')[0]
             else:
-                SP = "오류"
+                SP = "Error"
         return FOOD[food_name][0], SP
 
     def update_ui(self, food_name, emote, DOW, SP):
@@ -196,27 +196,26 @@ class MainWindow(QMainWindow):
         if not self.recipe_window:
             self.recipe_window = RecipeWindow()
 
-        # RecipeWindow의 update_recipes 함수에 딕셔너리 데이터 전달
+        # Pass dictionary data to RecipeWindow's update_recipes function
         self.recipe_window.update_recipes(recommended_recipes_data)
         self.recipe_window.show()
 
-    # 테이블 셀 클릭 이벤트 핸들러 수정
+    # Modify table cell click event handler
     def on_table_cell_clicked(self, row, column):
-        # '이름' 컬럼 (인덱스 1)이 클릭되었을 때만 처리
+        # Only process if the 'Name' column (index 1) is clicked
         if column == 1:
             item = self.table.item(row, column)
             if item:
-                # 클릭된 재료를 포함하여 현재 냉장고에 있는 모든 재료를 가져옵니다.
+                # Get all current ingredients, including the clicked ingredient.
                 all_current_ingredients = [food for food, info in FOOD.items() if info[1] == 1]
                 
-                # '추가 구매 시 가능한 레시피' 추천 로직 호출
-                # 이 함수는 "현재 보유 재료 외에 1-2개 추가 구매 시" 가능한 레시피를 찾습니다.
+                # Call the 'Recipes available with additional purchase' recommendation logic
+                # This function finds recipes that can be made if 1-2 more ingredients are purchased in addition to current ingredients.
                 self.show_additional_recipe_recommendations(all_current_ingredients)
 
     def show_additional_recipe_recommendations(self, current_available_ingredients):
-        # recipe_recommender의 get_recommendations_with_missing 함수는 이제
-        # "current_available_ingredients"를 가지고 있는 상태에서
-        # 1-2개 재료만 더 구매하면 만들 수 있는 레시피를 찾습니다.
+        # The recipe_recommender's get_recommendations_with_missing function now
+        # finds recipes that can be made by purchasing just 1-2 more ingredients, given the "current_available_ingredients".
         additional_recommended_recipes = self.recipe_recommender.get_recommendations_with_missing(
             current_available_ingredients
         )
@@ -224,8 +223,8 @@ class MainWindow(QMainWindow):
         if not self.additional_recipe_window:
             self.additional_recipe_window = AdditionalRecipeWindow()
         
-        # AdditionalRecipeWindow의 update_recipes 함수에 적절한 제목과 레시피 데이터 전달
-        # 이제 clicked_food_name은 필요 없으므로 빈 문자열 또는 다른 적절한 값 전달
+        # Pass appropriate title and recipe data to AdditionalRecipeWindow's update_recipes function
+        # The clicked_food_name is no longer needed, so pass an empty string or other appropriate value.
         self.additional_recipe_window.update_recipes("", additional_recommended_recipes)
         self.additional_recipe_window.show()
 
@@ -235,6 +234,6 @@ class MainWindow(QMainWindow):
         cv2.destroyAllWindows()
         if self.recipe_window:
             self.recipe_window.close()
-        if self.additional_recipe_window: # 추가 창도 닫기
+        if self.additional_recipe_window: # Close additional window as well
             self.additional_recipe_window.close()
         super().closeEvent(event)
