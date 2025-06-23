@@ -1,120 +1,120 @@
 [
     {
-        "name": "간단한 사과 샐러드",
+        "name": "Simple Apple Salad",
         "required_ingredients": ["apple", "bell_pepper"],
         "optional_ingredients": ["banana"],
         "url": "https://www.10000recipe.com/recipe/6898059"
     },
     {
-        "name": "바나나 우유 스무디",
+        "name": "Banana Milk Smoothie",
         "required_ingredients": ["banana", "milk"],
         "optional_ingredients": [],
         "url": "https://www.10000recipe.com/recipe/4037817"
     },
     {
-        "name": "닭고기 감자 카레",
+        "name": "Chicken and Potato Curry",
         "required_ingredients": ["chicken", "potato", "onion"],
         "optional_ingredients": ["carrot"],
         "url": "https://www.10000recipe.com/recipe/7008216"
     },
     {
-        "name": "초간단 계란 오믈렛",
+        "name": "Super Simple Egg Omelet",
         "required_ingredients": ["egg", "milk"],
         "optional_ingredients": ["onion", "green"],
         "url": "https://www.10000recipe.com/recipe/7010163"
     },
     {
-        "name": "오븐 구운 감자",
+        "name": "Oven Roasted Potatoes",
         "required_ingredients": ["potato"],
         "optional_ingredients": ["bell_pepper", "onion"],
         "url": "https://www.10000recipe.com/recipe/6965157"
     },
     {
-        "name": "냉장고 파먹기 채소 볶음",
+        "name": "Empty-the-Fridge Vegetable Stir-fry",
         "required_ingredients": ["cabbage", "onion"],
         "optional_ingredients": ["carrot", "bell_pepper", "green"],
         "url": "https://www.10000recipe.com/recipe/6955760"
     },
     {
-        "name": "싱싱한 그린 샐러드",
+        "name": "Fresh Green Salad",
         "required_ingredients": ["green"],
         "optional_ingredients": ["bell_pepper", "carrot"],
         "url": "https://www.10000recipe.com/recipe/6935478"
     },
     {
-        "name": "당근 머핀",
+        "name": "Carrot Muffin",
         "required_ingredients": ["carrot"],
         "optional_ingredients": ["egg"],
         "url": "https://www.10000recipe.com/recipe/6948184"
     },
     {
-        "name": "계란 볶음밥",
+        "name": "Egg Fried Rice",
         "required_ingredients": ["egg", "onion"],
         "optional_ingredients": ["carrot", "green"],
         "url": "https://www.10000recipe.com/recipe/6908026"
     },
     {
-        "name": "양파 수프",
+        "name": "Onion Soup",
         "required_ingredients": ["onion"],
         "optional_ingredients": ["green"],
         "url": "https://www.10000recipe.com/recipe/6899891"
     },
     {
-        "name": "삶은 계란",
+        "name": "Boiled Egg",
         "required_ingredients": ["egg"],
         "optional_ingredients": [],
         "url": "https://www.10000recipe.com/recipe/6900660"
     },
     {
-        "name": "신선한 당근 주스",
+        "name": "Fresh Carrot Juice",
         "required_ingredients": ["carrot"],
         "optional_ingredients": ["apple"],
         "url": "https://www.10000recipe.com/recipe/7000452"
     },
     {
-        "name": "치킨 샐러드",
+        "name": "Chicken Salad",
         "required_ingredients": ["chicken", "green"],
         "optional_ingredients": ["bell_pepper"],
         "url": "https://www.10000recipe.com/recipe/6890920"
     },
     {
-        "name": "간단 감자전",
+        "name": "Simple Potato Pancake",
         "required_ingredients": ["potato"],
         "optional_ingredients": ["onion", "green"],
         "url": "https://www.10000recipe.com/recipe/6877887"
     },
     {
-        "name": "배추된장국",
+        "name": "Cabbage Doenjangguk (Soybean Paste Soup)",
         "required_ingredients": ["cabbage"],
         "optional_ingredients": ["onion", "green"],
         "url": "https://www.10000recipe.com/recipe/7018259"
     },
     {
-        "name": "대파 계란찜",
+        "name": "Green Onion Steamed Egg",
         "required_ingredients": ["egg", "green"],
         "optional_ingredients": ["milk"],
         "url": "https://www.10000recipe.com/recipe/6903307"
     },
     {
-        "name": "대파라면",
+        "name": "Green Onion Ramen",
         "required_ingredients": ["green"],
         "optional_ingredients": ["egg"],
         "url": "https://www.10000recipe.com/recipe/6979961"
     },
     {
-        "name": "대파 김치전",
+        "name": "Green Onion Kimchi Pancake",
         "required_ingredients": ["green", "cabbage"],
         "optional_ingredients": ["egg"],
         "url": "https://www.10000recipe.com/recipe/6998878"
     },
     {
-        "name": "대파 구이",
+        "name": "Grilled Green Onion",
         "required_ingredients": ["green"],
         "optional_ingredients": [],
         "url": "https://www.10000recipe.com/recipe/7002011"
     },
     {
-        "name": "닭볶음탕",
+        "name": "Braised Spicy Chicken (Dakbokkeumtang)",
         "required_ingredients": ["chicken", "potato", "carrot", "onion", "green"],
         "optional_ingredients": [],
         "url": "https://www.10000recipe.com/recipe/6876357"
