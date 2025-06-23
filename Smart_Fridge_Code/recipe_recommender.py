@@ -9,10 +9,10 @@ class RecipeRecommender:
             with open(recipes_file, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
-            print(f"Error: 레시피 파일 '{recipes_file}'을 찾을 수 없습니다.")
+            print(f"Error: Recipe file '{recipes_file}' not found.")
             return []
         except json.JSONDecodeError:
-            print(f"Error: '{recipes_file}'에서 JSON을 디코딩할 수 없습니다.")
+            print(f"Error: Could not decode JSON from '{recipes_file}'.")
             return []
 
     def get_recommendations(self, available_ingredients):
@@ -53,10 +53,7 @@ class RecipeRecommender:
             "can_make_with_purchase": can_make_with_purchase
         }
 
-    # 이 함수의 정의를 아래와 같이 변경해야 합니다!
-    def get_recommendations_with_missing(self, available_ingredients): # 'available_ingredients'만 받도록 변경
-        # available_ingredients는 현재 냉장고에 있는 모든 재료 (클릭된 재료 포함)
-        
+    def get_recommendations_with_missing(self, available_ingredients):
         can_make_with_purchase = []
         available_ingredients_lower = {ing.lower() for ing in available_ingredients}
 
@@ -66,10 +63,10 @@ class RecipeRecommender:
             optional_ingredients = {ing.lower() for ing in recipe.get("optional_ingredients", [])}
             recipe_url = recipe.get("url")
 
-            # 현재 보유 재료와 필수 재료를 비교하여 부족한 재료를 찾습니다.
+            # Compares current available ingredients with required ingredients to find missing ones.
             missing_required = required_ingredients - available_ingredients_lower
             
-            # 부족한 필수 재료가 1개 또는 2개인 레시피를 찾습니다.
+            # Finds recipes that are missing 1 or 2 required ingredients.
             if 1 <= len(missing_required) <= 2:
                 can_make_with_purchase.append({
                     "name": recipe_name,
@@ -77,7 +74,7 @@ class RecipeRecommender:
                     "optional_ingredients": list(optional_ingredients),
                     "url": recipe_url,
                     "missing_count": len(missing_required),
-                    "missing_ingredients": list(missing_required) # 어떤 재료가 부족한지 명시
+                    "missing_ingredients": list(missing_required) # Specifies which ingredients are missing.
                 })
         
         return can_make_with_purchase
